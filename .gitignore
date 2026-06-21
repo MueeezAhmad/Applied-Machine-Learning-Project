@@ -10,3 +10,10 @@ venv/
 .DS_Store
 
 .ipynb_checkpoints/
+
+uploads/*
+!uploads/.gitkeep
+
+dataset/
+
+*.weights.h5
