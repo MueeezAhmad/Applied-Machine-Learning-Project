@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Named Entity Recognition</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">      
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>
+
+            <i class="fa-solid fa-atom"></i>
+
+            AML Project
+
+        </h2>
+
+        <a href="/">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="/machine_learning">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Machine Learning
+
+        </a>
+
+        <a href="/deep_learning">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Deep Learning
+
+        </a>
+
+        <a href="/generative_ai">
+
+            <i class="fa-solid fa-robot"></i>
+
+            Generative AI
+
+        </a>
+
+        <a href="/apriori">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Apriori
+
+        </a>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Named Entity Recognition</h1>
+
+            <p>
+
+                Entity Extraction using Transformers
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Example</h2>
+
+            <br>
+
+            <p>
+
+                Elon Musk founded SpaceX and lives in the United States.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Extracts Person, Organization and Location entities.
+
+            </p>
+
+        </div>
+
+        <br>
+
+
+        <div class="card">
+
+            <form action="/ner_predict"
+                  method="POST">
+
+                <h2>
+
+                    Enter Text
+
+                </h2>
+
+                <br>
+
+                <textarea
+                    name="text"
+                    rows="10"
+                    required></textarea>
+
+                <br><br>
+
+                <button type="submit">
+
+                    Extract Entities
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

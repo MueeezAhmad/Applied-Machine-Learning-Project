@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Text Generation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">      
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>
+
+            <i class="fa-solid fa-atom"></i>
+
+            AML Project
+
+        </h2>
+
+        <a href="/">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="/machine_learning">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Machine Learning
+
+        </a>
+
+        <a href="/deep_learning">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Deep Learning
+
+        </a>
+
+        <a href="/generative_ai">
+
+            <i class="fa-solid fa-robot"></i>
+
+            Generative AI
+
+        </a>
+
+        <a href="/apriori">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Apriori
+
+        </a>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Text Generation</h1>
+
+            <p>
+
+                GPT-Based Text Generation
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Example Prompt</h2>
+
+            <br>
+
+            <p>
+
+                once upon a time
+
+            </p>
+
+            <br>
+
+            <p>
+
+                The model will continue the story automatically.
+
+            </p>
+
+        </div>
+
+        <br>
+
+
+        <div class="card">
+
+            <form action="/text_generation_predict"
+                  method="POST">
+
+                <h2>
+
+                    Enter Prompt
+
+                </h2>
+
+                <br>
+
+                <textarea
+                    name="prompt"
+                    rows="10"
+                    required></textarea>
+
+                <br><br>
+
+                <button type="submit">
+
+                    Generate Text
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

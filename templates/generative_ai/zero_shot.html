@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Zero Shot Learning</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">      
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>
+
+            <i class="fa-solid fa-atom"></i>
+
+            AML Project
+
+        </h2>
+
+        <a href="/">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="/machine_learning">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Machine Learning
+
+        </a>
+
+        <a href="/deep_learning">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Deep Learning
+
+        </a>
+
+        <a href="/generative_ai">
+
+            <i class="fa-solid fa-robot"></i>
+
+            Generative AI
+
+        </a>
+
+        <a href="/apriori">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Apriori
+
+        </a>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Zero Shot Learning</h1>
+
+            <p>
+
+                Classification without Training
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Example</h2>
+
+            <br>
+
+            <p>
+
+                Text:
+
+                <br><br>
+
+                I love playing football with my friends.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Possible labels:
+
+                Sports, Politics, Technology, Education
+
+            </p>
+
+        </div>
+
+        <br>
+
+
+        <div class="card">
+
+            <form action="/zero_shot_predict"
+                  method="POST">
+
+                <h2>
+
+                    Enter Text
+
+                </h2>
+
+                <br>
+
+                <textarea
+                    name="text"
+                    rows="10"
+                    required></textarea>
+
+                <br><br>
+
+                <button type="submit">
+
+                    Classify
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

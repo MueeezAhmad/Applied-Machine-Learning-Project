@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>One-R</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">      
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>
+
+            <i class="fa-solid fa-atom"></i>
+
+            AML Project
+
+        </h2>
+
+        <a href="/">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="/machine_learning">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Machine Learning
+
+        </a>
+
+        <a href="/deep_learning">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Deep Learning
+
+        </a>
+
+        <a href="/generative_ai">
+
+            <i class="fa-solid fa-robot"></i>
+
+            Generative AI
+
+        </a>
+
+        <a href="/apriori">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Apriori
+
+        </a>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>One-R Algorithm</h1>
+
+            <p>
+
+                Rule-Based Classification
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <form action="/one_r_predict"
+                  method="POST">
+
+                <h2>
+
+                    Select Color
+
+                </h2>
+
+                <br>
+
+                <select name="color">
+
+                    <option>Red</option>
+
+                    <option>Green</option>
+
+                    <option>Blue</option>
+
+                </select>
+
+                <br><br>
+
+                <button type="submit">
+
+                    Predict
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

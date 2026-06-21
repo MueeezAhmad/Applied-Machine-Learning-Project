@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>{{title}}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">      
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>
+
+            <i class="fa-solid fa-atom"></i>
+
+            AML Project
+
+        </h2>
+
+        <a href="/">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="/machine_learning">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Machine Learning
+
+        </a>
+
+        <a href="/deep_learning">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Deep Learning
+
+        </a>
+
+        <a href="/generative_ai">
+
+            <i class="fa-solid fa-robot"></i>
+
+            Generative AI
+
+        </a>
+
+        <a href="/apriori">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Apriori
+
+        </a>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>{{title}}</h1>
+
+            <p>
+
+                Algorithm Output and Results
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>
+
+                Results
+
+            </h2>
+
+            <br>
+
+            {% if result is mapping %}
+
+                {% for key, value in result.items() %}
+
+                <div style="
+                background:#f8fafc;
+                padding:18px;
+                border-radius:15px;
+                margin-bottom:15px;
+                border-left:5px solid #2563eb;">
+
+                    <p>
+
+                        <b>{{key}}</b>
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        {{value}}
+
+                    </p>
+
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <pre>
+
+{{result}}
+
+                </pre>
+
+            {% endif %}
+
+
+
+            {% if image %}
+
+                <br><br>
+
+                <h2>
+
+                    Visualization
+
+                </h2>
+
+                <br>
+
+                <img
+                src="{{ url_for('static', filename=image) }}">
+
+            {% endif %}
+
+            <br><br>
+
+            <a href="/"
+               style="
+               background:#2563eb;
+               color:white;
+               text-decoration:none;
+               padding:15px 30px;
+               border-radius:12px;">
+
+                Back to Dashboard
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

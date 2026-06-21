@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Naive Bayes</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">      
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>
+
+            <i class="fa-solid fa-atom"></i>
+
+            AML Project
+
+        </h2>
+
+        <a href="/">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="/machine_learning">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Machine Learning
+
+        </a>
+
+        <a href="/deep_learning">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Deep Learning
+
+        </a>
+
+        <a href="/generative_ai">
+
+            <i class="fa-solid fa-robot"></i>
+
+            Generative AI
+
+        </a>
+
+        <a href="/apriori">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Apriori
+
+        </a>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Naive Bayes</h1>
+
+            <p>
+
+                Spam Email Detection
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <form action="/naive_bayes_predict"
+                  method="POST">
+
+                <h2>
+
+                    Enter Email Text
+
+                </h2>
+
+                <br>
+
+                <textarea
+                    name="email"
+                    rows="10"
+                    required
+                    style="
+                    width:100%;
+                    padding:20px;
+                    border-radius:15px;
+                    border:1px solid lightgray;
+                    font-size:16px;"></textarea>
+
+                <br><br>
+
+                <button
+                    type="submit"
+                    style="
+                    background:#2563eb;
+                    color:white;
+                    border:none;
+                    padding:15px 30px;
+                    border-radius:12px;
+                    cursor:pointer;
+                    font-size:16px;">
+
+                    Predict
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
